@@ -1,0 +1,170 @@
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+.top-header {
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.logo {
+  height: 60px;
+}
+
+.info-text {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.info-text a {
+  color: #007bff;
+}
+
+/* Main Header Section */
+.header {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.search-bar {
+  margin-top: 10px;
+}
+
+.search-bar input {
+  padding: 8px;
+  width: 250px;
+  border-radius: 4px;
+  border: none;
+}
+
+.search-bar button {
+  padding: 8px 12px;
+  background-color: #555;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background-color: #666;
+}
+
+/* Controls Section */
+.controls {
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  background-color: white;
+}
+
+.controls select,
+.controls button {
+  padding: 6px 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.add-button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.add-button:hover {
+  background-color: #218838;
+}
+
+/* Filter Panel */
+.filter-panel {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+}
+
+.filter-panel input {
+  padding: 6px;
+  margin: 5px;
+  width: 200px;
+}
+
+.filter-panel button {
+  padding: 6px 12px;
+  margin: 5px;
+  border-radius: 4px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.filter-panel button:hover {
+  background-color: #0056b3;
+}
+
+/* Employee Cards */
+.directory {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  background-color: white;
+  gap: 20px;
+}
+
+.employee-card {
+  background-color: #fefefe;
+  border: 1px solid #ddd;
+  padding: 15px;
+  width: 250px;
+  border-radius: 8px;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.1);
+}
+
+.employee-card strong {
+  font-size: 16px;
+}
+
+.employee-card button {
+  margin-top: 10px;
+  margin-right: 5px;
+  padding: 6px 10px;
+  border: none;
+  background-color: #555;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.employee-card button:hover {
+  background-color: #777;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #222;
+  color: white;
+  margin-top: 20px;
+  font-size: 14px;
+}

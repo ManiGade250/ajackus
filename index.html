@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Employee Directory</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+
+  <header class="header">
+    <h1>Employee Directory</h1>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search by name or email" oninput="searchEmployees()" />
+      <button onclick="toggleFilter()">Filter</button>
+    </div>
+  </header>
+
+ 
+  <section class="controls">
+    <label>Sort:</label>
+    <select id="sortSelect" onchange="sortEmployees()">
+      <option value="">--Select--</option>
+      <option value="firstName">First Name</option>
+      <option value="department">Department</option>
+    </select>
+
+    <label>Show:</label>
+    <select id="showCount" onchange="paginateEmployees()">
+      <option>10</option>
+      <option>25</option>
+      <option>50</option>
+      <option>100</option>
+    </select>
+
+    <button onclick="location.href='form.html'" class="add-button">Add Employee</button>
+  </section>
+
+
+  <section id="filterPanel" class="filter-panel" style="display:none">
+    <h3>Filter Employees</h3>
+    <label>First Name:</label>
+    <input type="text" id="filterFirstName" />
+    <label>Department:</label>
+    <input type="text" id="filterDepartment" />
+    <label>Role:</label>
+    <input type="text" id="filterRole" />
+    <button onclick="applyFilters()">Apply</button>
+    <button onclick="resetFilters()">Reset</button>
+  </section>
+
+
+  <section id="directory" class="directory">
+    <div class="employee-card">
+      <strong>Alice Smith</strong><br />
+      <span>Email: alice@example.com</span><br />
+      <span>Department: HR</span><br />
+      <span>Role: Manager</span><br />
+      <button onclick="editEmployee(1)">Edit</button>
+      <button onclick="deleteEmployee(1)">Delete</button>
+    </div>
+    <div class="employee-card">
+      <strong>Bob Johnson</strong><br />
+      <span>Email: bob@example.com</span><br />
+      <span>Department: IT</span><br />
+      <span>Role: Developer</span><br />
+      <button onclick="editEmployee(2)">Edit</button>
+      <button onclick="deleteEmployee(2)">Delete</button>
+    </div>
+    <div class="employee-card">
+      <strong>Charlie Lee</strong><br />
+      <span>Email: charlie@example.com</span><br />
+      <span>Department: Finance</span><br />
+      <span>Role: Analyst</span><br />
+      <button onclick="editEmployee(3)">Edit</button>
+      <button onclick="deleteEmployee(3)">Delete</button>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <p>© 2025 Employee Directory App. All rights reserved.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html> css code 
