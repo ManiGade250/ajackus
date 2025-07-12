@@ -1,3 +1,4 @@
+
 let employees = [
   {
     id: 1,
@@ -25,10 +26,19 @@ let employees = [
   }
 ];
 
+function editEmployee(id) {
+  alert("Redirecting to edit form for employee ID: " + id);
+  window.location.href = "form.html?id=" + id;
+}
+
+function deleteEmployee(id) {
+  employees = employees.filter(emp => emp.id !== id);
+  renderEmployees();
+}
+
 function renderEmployees(list = employees) {
   const directory = document.getElementById("directory");
   directory.innerHTML = "";
-
   list.forEach((emp) => {
     const card = document.createElement("div");
     card.className = "employee-card";
@@ -91,18 +101,6 @@ function paginateEmployees() {
   const count = parseInt(document.getElementById("showCount").value);
   renderEmployees(employees.slice(0, count));
 }
-
-function deleteEmployee(id) {
-  employees = employees.filter(emp => emp.id !== id);
-  renderEmployees();
-}
-
-function editEmployee(id) {
-  alert("This will redirect to form.html and load employee ID: " + id);
-  
-  location.href = "form.html?id=" + id;
-}
-
 
 window.onload = () => {
   renderEmployees();
